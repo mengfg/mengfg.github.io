@@ -7,7 +7,7 @@ tags: layUI
 
 transfer 组件可以进行数据的交互筛选,如：
 
-![1602144217326](E:\blog\mengfg.github.io\images\posts\layui\transfer.png)
+![1602144217326](\images\posts\layui\transfer.png)
 
 上代码：
 

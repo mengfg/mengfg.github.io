@@ -1,63 +1,40 @@
----
-layout: compress
-# Default layout
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT Licensed
----
-
 <!DOCTYPE html>
-
-{% if site.lang %}
-  {% assign lang = site.lang | split: "_" | first %}
-{% else %}
-  {% assign lang = 'en' %}
-{% endif %}
-
-{% capture prefer_mode %}
-  {% if site.theme_mode != "dual" %}
-    mode="{{ site.theme_mode }}"
-  {% endif %}
-{% endcapture %}
-
-<html lang="{{ lang }}" {{ prefer_mode }} >
+<html>
 
   {% include head.html %}
 
-  <body data-spy="scroll" data-target="#toc">
+  <body>
 
-    <div id="sidebar" class="d-flex flex-column">
-      {% include sidebar.html %}
-    </div>
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">  {{site.blog_button.title}}
+              </a>
+            </i>
+            {% for item in site.nav %}
+                <i class="nav-menu-item">
 
-    {% include topbar.html %}
-
-    <div id="main-wrapper">
-      <div id="main">
-
-        {% include refactor-content.html content=content %}
-
-        {% include footer.html %}
-
+                  <a href="{{item.url}}" title="{{item.description}}" class="btn-mobile-menu__icon">
+                      {{item.title}}
+                  </a>
+                </i>
+            {% endfor %}
+          </nav>
       </div>
+    </span>
+    
+    {% include side-panel.html %}
 
-      {% include search-results.html %}
-
-    </div> <!-- #main-wrapper -->
-
-    <div id="mask"></div>
-
-    <a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    {% if jekyll.environment == 'production' %}
-      {% include google-analytics.html %}
-    {% endif %}
-
-    {% include search-loader.html %}
-
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{ content }}
+            {% include footer.html %}
+        </div>
+    </div>
+    
+    {% include external.html %}
+    
   </body>
 
 </html>

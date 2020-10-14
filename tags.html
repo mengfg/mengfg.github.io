@@ -8,13 +8,13 @@ group: navigation
 
 <ul class="tag_box inline">
   {% assign tags_list = site.tags %}
-
+  {% include JB/tags_list %}
 </ul>
 
 <div class = "card">
 {% for tag in site.tags %} 
 
-  <h3 id="{{ tag[0] }}-ref">{{ tag[0] }} 共10篇</h3>
+  <h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
   <ul>
     {% assign pages_list = tag[1] %}  
     {% include JB/pages_list %}

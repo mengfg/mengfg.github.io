@@ -349,6 +349,8 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 #### 完善项目信息
 
+注意：点击next时出现 **Artifact contains illegal characters** 是因为`Artifact`中使用了大写，只能是全小写，单词之间用`-`分隔
+
 ![9](\images\posts\springboot\9.jpg)
 
 #### 选择需要的依赖及Springboot的版本

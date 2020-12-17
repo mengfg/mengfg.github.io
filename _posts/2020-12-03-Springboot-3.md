@@ -5,6 +5,29 @@ date: 2020-12-03
 tags: Springboot
 ---
 
+## SPI
+
+### java中的SPI
+
+SPI的全名为Service Provider Interface.大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。
+
+简单的总结下java SPI机制的思想。我们系统里抽象的各个模块，往往有很多不同的实现方案。面向的对象的设计里，我们一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。
+
+java SPI就是提供这样的一个机制：为某个接口寻找服务实现的机制。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。
+
+### java SPI的规范
+
+要使用Java SPI，需要遵循如下约定：
+
+1. 当服务提供者提供了接口的一种具体实现后，在jar包的META-INF/services目录下创建一个以“接口全路径名”为命名的文件，内容为实现类的全限定名；
+2. 接口实现类所在的jar包放在主程序的classpath中；
+3. 主程序通过java.util.ServiceLoder动态装载实现模块，它通过扫描META-INF/services目录下的配置文件找到实现类的全限定名，把类加载到JVM；
+4. SPI的实现类必须携带一个不带参数的构造方法；
+
+### Spring Boot中的SPI机制
+
+在Spring中也有一种类似与JavaSPI的加载机制。它在META-INF/spring.factories文件中配置接口的实现类名称，然后在程序中读取这些配置文件并实例化。这种自定义的SPI机制是Springoot Starter实现的基础。
+
 ## 自动配置
 
 配置文件到底能写什么？怎么写？自动配置原理；
@@ -221,4 +244,3 @@ public class HttpEncodingAutoConfiguration {
 - `Negative matches`：（没有启动，没有匹配成功的自动配置类）
 
 
-  

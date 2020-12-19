@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Springboot笔记（五） Springboot中Web开发
+title: Springboot笔记（五） SpringbootWeb开发之静态资源
 date: 2020-12-05
 tags: Springboot
 ---

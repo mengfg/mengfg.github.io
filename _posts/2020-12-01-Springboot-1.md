@@ -82,28 +82,23 @@ Springboot2引入了两套技术栈，一套就是我们原先使用的servlet�
 ## 2.1、SpringBoot优点
 
 - Create stand-alone Spring applications
-
-- - 创建独立Spring应用
+  - 创建独立Spring应用
 
 - Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)
-
-- - 内嵌web服务器 Tomcat, Jetty , Undertow
+  - 内嵌web服务器 Tomcat, Jetty , Undertow
 
 - Provide opinionated 'starter' dependencies to simplify your build configuration
-
-- - 自动starter依赖，简化构建配置
+  - 自动starter依赖，简化构建配置
 
 - Automatically configure Spring and 3rd party libraries whenever possible
-
-- - 自动配置Spring以及第三方功能
+  - 自动配置Spring以及第三方功能
 
 - Provide production-ready features such as metrics, health checks, and externalized configuration
-
-- - 提供生产级别的监控、健康检查及外部化配置
+  - 提供生产级别的监控、健康检查及外部化配置
 
 - Absolutely no code generation and no requirement for XML configuration
+  - 无代码生成、无需编写XML
 
-- - 无代码生成、无需编写XML
 
 
 

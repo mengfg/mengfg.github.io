@@ -151,6 +151,8 @@ rabbitmq-plugins enable rabbitmq_management
 
 #### 写yaml
 
+新建bootstrap.yml
+
 ```yaml
 server:
   port: 3366
@@ -434,7 +436,7 @@ management:
 
 #### 修改yaml
 
-加入rabbitmq相关配置，并暴露端点
+修改bootstrap.yml，加入rabbitmq相关配置，并暴露端点
 
 ```yaml
 server:
@@ -547,7 +549,7 @@ management:
 
 #### 修改yaml
 
-加入rabbitmq相关配置，并暴露端点
+修改bootstrap.yml，加入rabbitmq相关配置，并暴露端点
 
 ```yaml
 server:

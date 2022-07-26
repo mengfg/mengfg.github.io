@@ -11,7 +11,7 @@ tags: ElasticSearch
 
 ## 概念
 
-![image-20220221215721301](./ElasticSearch.assets/image-20220221215721301.png)
+![image-20220221215721301](image/posts/ElasticSearch.assets/image-20220221215721301.png)
 
 相当于是有两个步骤：
 

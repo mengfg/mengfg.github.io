@@ -11,7 +11,7 @@ tags: ElasticSearch
 
 ## 概念
 
-![image-20220221215721301](image/posts/ElasticSearch.assets/image-20220221215721301.png)
+![image-20220221215721301](/images/posts/ElasticSearch.assets/image-20220221215721301.png)
 
 相当于是有两个步骤：
 
@@ -27,7 +27,7 @@ tags: ElasticSearch
 
 ## 特点
 
-![image-20220221215750230](ElasticSearch.assets/image-20220221215750230.png)
+![image-20220221215750230](/images/posts/ElasticSearch.assets/image-20220221215750230.png)
 
 全文检索具有以下特点：
 
@@ -51,11 +51,11 @@ tags: ElasticSearch
 
 ### 什么是ElasticSearch
 
-![image-20220221215620765](ElasticSearch.assets/image-20220221215620765.png)
+![image-20220221215620765](/images/posts/ElasticSearch.assets/image-20220221215620765.png)
 
 ### ElasticSearch的诞生
 
-![image-20220221215545323](ElasticSearch.assets/image-20220221215545323.png)
+![image-20220221215545323](/images/posts/ElasticSearch.assets/image-20220221215545323.png)
 
 
 
@@ -76,17 +76,17 @@ tags: ElasticSearch
 https://www.elastic.co/cn/elasticsearch/
 ````
 
-![image-20220303131748922](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303131748922.png)
+![image-20220303131748922](/images/posts/ElasticSearch.assets\image-20220303131748922.png)
 
 
 
-![image-20220303131936358](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303131936358.png)
+![image-20220303131936358](/images/posts/ElasticSearch.assets\image-20220303131936358.png)
 
 2、安装（注意：安装ES不能使用root用户，需要创建普通用户）
 
 创建用户的命令如下：
 
-![image-20220303153458916](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303153458916.png)
+![image-20220303153458916](/images/posts/ElasticSearch.assets\image-20220303153458916.png)
 
 tips：如果命令行前面是$证明是普通用户，如果是#代表是root用户
 
@@ -98,9 +98,9 @@ tar -zxvf elasticsearch-7.14.0-linux-x86_64.tar.gz
 
 4、查看ES解压包中的目录结构
 
-![image-20220303155039070](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303155039070.png)
+![image-20220303155039070](/images/posts/ElasticSearch.assets\image-20220303155039070.png)
 
-![image-20220303155057433](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303155057433.png)
+![image-20220303155057433](/images/posts/ElasticSearch.assets\image-20220303155057433.png)
 
 其中data目录在刚解压完成未运行时是没有的，需要运行后才有。
 
@@ -118,11 +118,11 @@ meng@ubuntu:~/software/elasticsearch-7.14.0/bin$ ./elasticsearch -d
 
 如果此时你的电脑已经装有JDK，并且低于JDK11，那么将会抛出错误，并且可以使用以下两种方式解决：
 
-![image-20220303161938646](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303161938646.png)
+![image-20220303161938646](/images/posts/ElasticSearch.assets\image-20220303161938646.png)
 
 配置环境变量：
 
-![image-20220303162327370](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303162327370.png)
+![image-20220303162327370](/images/posts/ElasticSearch.assets\image-20220303162327370.png)
 
 配置完成之后使用source /etc/profile命令重新加载，或者直接重启机器
 
@@ -141,7 +141,7 @@ http://localhost:9200
 9200是web端口，也就是restful风格的端口，TCP的端口是9300
 ```
 
-![image-20220303163911127](E:\重走长征路\ElasticSearch7.14分布式搜索引擎\ElasticSearch.assets\image-20220303163911127.png)
+![image-20220303163911127](/images/posts/ElasticSearch.assets\image-20220303163911127.png)
 
 7、停止ES服务
 
@@ -153,7 +153,7 @@ http://localhost:9200
 
 8、开启远程访问
 
-![image-20220305234558367](ElasticSearch.assets/image-20220305234558367.png)
+![image-20220305234558367](/images/posts/ElasticSearch.assets/image-20220305234558367.png)
 
 ```
 vim elasticsearch.yml
@@ -161,25 +161,25 @@ vim elasticsearch.yml
 network.host: 0.0.0.0
 ```
 
-![image-20220305234651236](ElasticSearch.assets/image-20220305234651236.png)
+![image-20220305234651236](/images/posts/ElasticSearch.assets/image-20220305234651236.png)
 
-![image-20220305234906487](ElasticSearch.assets/image-20220305234906487.png)
+![image-20220305234906487](/images/posts/ElasticSearch.assets/image-20220305234906487.png)
 
 注意不同的Linux系统，报错可能会不同，注意分别解决即可
 
-![image-20220306000700998](ElasticSearch.assets/image-20220306000700998.png)
+![image-20220306000700998](/images/posts/ElasticSearch.assets/image-20220306000700998.png)
 
-![image-20220306000741610](ElasticSearch.assets/image-20220306000741610.png)
+![image-20220306000741610](/images/posts/ElasticSearch.assets/image-20220306000741610.png)
 
 ### Docker方式安装
 
-![image-20220306002233585](ElasticSearch.assets/image-20220306002233585.png)
+![image-20220306002233585](/images/posts/ElasticSearch.assets/image-20220306002233585.png)
 
 ## Kibana
 
 ### 简介
 
-![image-20220306120633836](ElasticSearch.assets/image-20220306120633836.png)
+![image-20220306120633836](/images/posts/ElasticSearch.assets/image-20220306120633836.png)
 
 ### 安装
 
@@ -228,15 +228,15 @@ http://地址:5601	#kibana默认端口为5601
 
 #### docker方式安装
 
-![image-20220306145728477](ElasticSearch.assets/image-20220306145728477.png)
+![image-20220306145728477](/images/posts/ElasticSearch.assets/image-20220306145728477.png)
 
 #### compose方式安装
 
-![image-20220306150144573](ElasticSearch.assets/image-20220306150144573.png)
+![image-20220306150144573](/images/posts/ElasticSearch.assets/image-20220306150144573.png)
 
 ## 核心概念
 
-![image-20220306151526204](ElasticSearch.assets/image-20220306151526204.png)
+![image-20220306151526204](/images/posts/ElasticSearch.assets/image-20220306151526204.png)
 
 在ES7.X中索引相当于mysql中的表，mapping相当于mysql中的Schema主要存储字段的类型等信息，文档相当于mysql中的数据行。
 
@@ -246,17 +246,17 @@ http://地址:5601	#kibana默认端口为5601
 
 像我们平时mysql中的数据行，第一行数据id为1001，内容是XXX
 
-![image-20220306152347365](ElasticSearch.assets/image-20220306152347365.png)
+![image-20220306152347365](/images/posts/ElasticSearch.assets/image-20220306152347365.png)
 
 2、倒排索引
 
 在ES中使用的是倒排索引，包含关键词name的有id为1001,1002的数据
 
-![image-20220306152428614](ElasticSearch.assets/image-20220306152428614.png)
+![image-20220306152428614](/images/posts/ElasticSearch.assets/image-20220306152428614.png)
 
 有了倒排索引，这样表的概念慢慢就弱化了，所以在ES7.X中就将原先Type的概念直接移除了，在ES7.X以前版本的对应关系
 
-![image-20220306152921749](ElasticSearch.assets/image-20220306152921749.png)
+![image-20220306152921749](/images/posts/ElasticSearch.assets/image-20220306152921749.png)
 
 ## 基本操作
 
@@ -322,7 +322,7 @@ ES中常见的字段类型：
 
 具体详见https://www.elastic.co/guide/en/elasticsearch/reference/7.15/mapping-types.html
 
-![image-20220307141607588](ElasticSearch.assets/image-20220307141607588.png)
+![image-20220307141607588](/images/posts/ElasticSearch.assets/image-20220307141607588.png)
 
 #### 创建
 
@@ -396,7 +396,7 @@ POST /products/_doc
 }
 ```
 
-![image-20220307231548607](ElasticSearch.assets/image-20220307231548607.png)
+![image-20220307231548607](/images/posts/ElasticSearch.assets/image-20220307231548607.png)
 
 #### 查询文档
 
@@ -405,7 +405,7 @@ POST /products/_doc
 GET /products/_doc/MIzzZH8BCTItoTY8F_kU
 ```
 
-![image-20220307231848151](ElasticSearch.assets/image-20220307231848151.png)
+![image-20220307231848151](/images/posts/ElasticSearch.assets/image-20220307231848151.png)
 
 #### 删除文档
 
@@ -414,7 +414,7 @@ GET /products/_doc/MIzzZH8BCTItoTY8F_kU
 DELETE /products/_doc/MIzzZH8BCTItoTY8F_kU
 ```
 
-![image-20220307232015739](ElasticSearch.assets/image-20220307232015739.png)
+![image-20220307232015739](/images/posts/ElasticSearch.assets/image-20220307232015739.png)
 
 #### 更新文档
 
@@ -427,7 +427,7 @@ PUT /products/_doc/1
 }
 ```
 
-![image-20220307232237479](ElasticSearch.assets/image-20220307232237479.png)
+![image-20220307232237479](/images/posts/ElasticSearch.assets/image-20220307232237479.png)
 
 出现这种问题可以有两种方式解决：
 
@@ -443,7 +443,7 @@ PUT /products/_doc/1
 }
 ```
 
-![image-20220307232540903](ElasticSearch.assets/image-20220307232540903.png)
+![image-20220307232540903](/images/posts/ElasticSearch.assets/image-20220307232540903.png)
 
 ```json
 #第二种方式：这种方式会先根据ID将内容先查询出来，然后再去更新。可以将数据原始内容保存，并在此基础上进行更新
@@ -458,7 +458,7 @@ POST /products/_doc/1/_update
 
 ```
 
-![image-20220307233030355](ElasticSearch.assets/image-20220307233030355.png)
+![image-20220307233030355](/images/posts/ElasticSearch.assets/image-20220307233030355.png)
 
 #### 批量操作
 
@@ -485,7 +485,7 @@ POST /products/_doc/_bulk
 这样直接会报错
 ```
 
-![image-20220307235157165](ElasticSearch.assets/image-20220307235157165.png)
+![image-20220307235157165](/images/posts/ElasticSearch.assets/image-20220307235157165.png)
 
 原因在于，如果是批量添加数据，不论数据多少，都不应格式化，应该在同一行
 
@@ -497,7 +497,7 @@ POST /products/_doc/_bulk
 {"id":3,"title":"小浣熊3号","price":3.5,"created_at":"2022-12-11","description":"小浣熊3号真好吃"}
 ```
 
-![image-20220307235324771](ElasticSearch.assets/image-20220307235324771.png)
+![image-20220307235324771](/images/posts/ElasticSearch.assets/image-20220307235324771.png)
 
 ```json
 #更新操作，其中包括添加、更新、删除
@@ -509,13 +509,13 @@ POST /products/_doc/_bulk
 {"delete":{"_id":2}}
 ```
 
-![image-20220308000137832](ElasticSearch.assets/image-20220308000137832.png)
+![image-20220308000137832](/images/posts/ElasticSearch.assets/image-20220308000137832.png)
 
 需要注意的是：虽然这是一个批量操作，但是每条结果都是单独返回的，也就是说他们之间每一条都是单独运行的，并不是一个原子操作，不会说因为某一条失败而全部失败
 
 ## 高级查询
 
-![image-20220308222917169](ElasticSearch.assets/image-20220308222917169.png)
+![image-20220308222917169](/images/posts/ElasticSearch.assets/image-20220308222917169.png)
 
 ### 语法
 
@@ -544,7 +544,7 @@ GET /products/_search
 }
 ```
 
-![image-20220308224129654](ElasticSearch.assets/image-20220308224129654.png)
+![image-20220308224129654](/images/posts/ElasticSearch.assets/image-20220308224129654.png)
 
 #### 关键词查询[term]
 
@@ -928,7 +928,7 @@ GET /products/_search
 }
 ```
 
-![image-20220314110737018](ElasticSearch.assets/image-20220314110737018.png)
+![image-20220314110737018](/images/posts/ElasticSearch.assets/image-20220314110737018.png)
 
 以上示例可以看到ES默认使用<em>标签将高亮内容进行了修饰，我们也可以进行标签的自定义
 
@@ -965,7 +965,7 @@ GET /products/_search
 }
 ```
 
-![image-20220314111558440](ElasticSearch.assets/image-20220314111558440.png)
+![image-20220314111558440](/images/posts/ElasticSearch.assets/image-20220314111558440.png)
 
 默认highlight中的分词字段只能是参与查询的字段，但是如果想让所有的字段都高亮显示，可以使用require_field_match开启多个字段高亮
 
@@ -1042,7 +1042,7 @@ GET /orders/_search
 }
 ```
 
-![image-20220314143443705](ElasticSearch.assets/image-20220314143443705.png)
+![image-20220314143443705](/images/posts/ElasticSearch.assets/image-20220314143443705.png)
 
 #### 返回指定条数[size]
 
@@ -1098,7 +1098,7 @@ GET /products/_search
 
 我们手动指定排序的时候，会干预默认ES的搜索，所以我们查询出来的所有文档得分都不存在
 
-![image-20220314150022487](ElasticSearch.assets/image-20220314150022487.png)
+![image-20220314150022487](/images/posts/ElasticSearch.assets/image-20220314150022487.png)
 
 #### 返回指定字段[_source]
 
@@ -1115,13 +1115,13 @@ GET /products/_search
 }
 ```
 
-![image-20220314150614627](ElasticSearch.assets/image-20220314150614627.png)
+![image-20220314150614627](/images/posts/ElasticSearch.assets/image-20220314150614627.png)
 
 ## 索引原理
 
 ### 倒排索引
 
-![image-20220314163732766](ElasticSearch.assets/image-20220314163732766.png)
+![image-20220314163732766](/images/posts/ElasticSearch.assets/image-20220314163732766.png)
 
 ### 索引模型
 
@@ -1167,13 +1167,13 @@ PUT /products1/_doc/_bulk
 
 在存储以上这些数据的时候，ES内部是这样实现的：
 
-![image-20220314171938562](ElasticSearch.assets/image-20220314171938562.png)
+![image-20220314171938562](/images/posts/ElasticSearch.assets/image-20220314171938562.png)
 
-![image-20220314172044148](ElasticSearch.assets/image-20220314172044148.png)
+![image-20220314172044148](/images/posts/ElasticSearch.assets/image-20220314172044148.png)
 
 综合以上用图例表示为：
 
-![image-20220314172150083](ElasticSearch.assets/image-20220314172150083.png)
+![image-20220314172150083](/images/posts/ElasticSearch.assets/image-20220314172150083.png)
 
 除此以外，ES不光会记录文档的id，还会值在文档中出现的次数以及文档的长度，用于计算出_score的值用作排序，比如以上的”很“字在三条文档中都会出现，那么ES中会做如下记录：
 
@@ -1198,21 +1198,21 @@ PUT /products1/_doc/_bulk
   }
 ```
 
-![image-20220314173038669](ElasticSearch.assets/image-20220314173038669.png)
+![image-20220314173038669](/images/posts/ElasticSearch.assets/image-20220314173038669.png)
 
 ## 分词器
 
 ### Analysis和Analyzer
 
-![image-20220321225007064](ElasticSearch.assets/image-20220321225007064.png)
+![image-20220321225007064](/images/posts/ElasticSearch.assets/image-20220321225007064.png)
 
 ### Analyzer组成
 
-![image-20220321225634833](ElasticSearch.assets/image-20220321225634833.png)
+![image-20220321225634833](/images/posts/ElasticSearch.assets/image-20220321225634833.png)
 
 ### 内置分词器
 
-![image-20220321225833909](ElasticSearch.assets/image-20220321225833909.png)
+![image-20220321225833909](/images/posts/ElasticSearch.assets/image-20220321225833909.png)
 
 ### 内置分词器测试
 
@@ -1228,7 +1228,7 @@ POST /_analyze
 }
 ```
 
-![image-20220326233549463](ElasticSearch.assets/image-20220326233549463.png)
+![image-20220326233549463](/images/posts/ElasticSearch.assets/image-20220326233549463.png)
 
 #### Simple分词器
 
@@ -1242,7 +1242,7 @@ POST /_analyze
 }
 ```
 
-![image-20220326233912628](ElasticSearch.assets/image-20220326233912628.png)
+![image-20220326233912628](/images/posts/ElasticSearch.assets/image-20220326233912628.png)
 
 #### Whitespace分词器
 
@@ -1256,7 +1256,7 @@ POST /_analyze
 }
 ```
 
-![image-20220326234206325](ElasticSearch.assets/image-20220326234206325.png)
+![image-20220326234206325](/images/posts/ElasticSearch.assets/image-20220326234206325.png)
 
 ### 创建索引设置分词
 
@@ -1331,7 +1331,7 @@ mv ik ./plugins/
 
 ik分词器中包含的文件
 
-![image-20220327003222264](ElasticSearch.assets/image-20220327003222264.png)
+![image-20220327003222264](/images/posts/ElasticSearch.assets/image-20220327003222264.png)
 
 4、重启ES生效
 
@@ -1343,7 +1343,7 @@ ES安装目录/plugins/ik/config/IKAnalyzer.cfg.xml
 
 #### IK使用
 
-![image-20220327003720946](ElasticSearch.assets/image-20220327003720946.png)
+![image-20220327003720946](/images/posts/ElasticSearch.assets/image-20220327003720946.png)
 
 ```
 #ik_smart 最粗粒度的拆分
@@ -1354,7 +1354,7 @@ POST /_analyze
 }
 ```
 
-![image-20220327003922460](ElasticSearch.assets/image-20220327003922460.png)
+![image-20220327003922460](/images/posts/ElasticSearch.assets/image-20220327003922460.png)
 
 ```
 #ik_max_word 最细粒度的拆分
@@ -1365,7 +1365,7 @@ POST /_analyze
 }
 ```
 
-![image-20220327004117038](ElasticSearch.assets/image-20220327004117038.png)
+![image-20220327004117038](/images/posts/ElasticSearch.assets/image-20220327004117038.png)
 
 以后在创建索引时，如何指定ik分词器呢？
 
@@ -1387,9 +1387,9 @@ PUT test2
 
 #### 拓展词、停用词配置
 
-![image-20220327221050628](ElasticSearch.assets/image-20220327221050628.png)
+![image-20220327221050628](/images/posts/ElasticSearch.assets/image-20220327221050628.png)
 
-![image-20220327221129685](ElasticSearch.assets/image-20220327221129685.png)
+![image-20220327221129685](/images/posts/ElasticSearch.assets/image-20220327221129685.png)
 
 例如：
 
@@ -1403,11 +1403,11 @@ POST /_analyze
 此时默认是没有“小明明”、“我叫”这两个词组的
 ```
 
-![image-20220327224656278](ElasticSearch.assets/image-20220327224656278.png)
+![image-20220327224656278](/images/posts/ElasticSearch.assets/image-20220327224656278.png)
 
 可以通过设置拓展词加入，注意：每行只能写一个词
 
-![image-20220327224856865](ElasticSearch.assets/image-20220327224856865.png)
+![image-20220327224856865](/images/posts/ElasticSearch.assets/image-20220327224856865.png)
 
 ```
 POST /_analyze
@@ -1421,21 +1421,21 @@ POST /_analyze
 
 
 
-![image-20220327224936674](ElasticSearch.assets/image-20220327224936674.png)
+![image-20220327224936674](/images/posts/ElasticSearch.assets/image-20220327224936674.png)
 
 停用词正好相反，可以让本该出现的词不出现，比如将上面例子中的“明明”停用
 
-![image-20220327225343251](ElasticSearch.assets/image-20220327225343251.png)日常使用中可以停用的词和拓展的词都会很多，如果自己一个个加入会很麻烦，所以IK分词器默认给我们建立了很多的默认词典。我们可以在他的基础上在进行修改即可
+![image-20220327225343251](/images/posts/ElasticSearch.assets/image-20220327225343251.png)日常使用中可以停用的词和拓展的词都会很多，如果自己一个个加入会很麻烦，所以IK分词器默认给我们建立了很多的默认词典。我们可以在他的基础上在进行修改即可
 
-![image-20220327225744535](ElasticSearch.assets/image-20220327225744535.png)
+![image-20220327225744535](/images/posts/ElasticSearch.assets/image-20220327225744535.png)
 
 ## 过滤查询<Filter Query>
 
 ### 过滤查询
 
-![image-20220329161539382](ElasticSearch.assets/image-20220329161539382.png)
+![image-20220329161539382](/images/posts/ElasticSearch.assets/image-20220329161539382.png)
 
-![image-20220329161625285](ElasticSearch.assets/image-20220329161625285.png)
+![image-20220329161625285](/images/posts/ElasticSearch.assets/image-20220329161625285.png)
 
 ### 使用
 
@@ -1525,7 +1525,7 @@ GET /products1/_search
 }
 ```
 
-![image-20220329170749856](ElasticSearch.assets/image-20220329170749856.png)
+![image-20220329170749856](/images/posts/ElasticSearch.assets/image-20220329170749856.png)
 
 ```
 #term过滤
@@ -1555,7 +1555,7 @@ GET /products1/_search
 }
 ```
 
-![image-20220329170945173](ElasticSearch.assets/image-20220329170945173.png)
+![image-20220329170945173](/images/posts/ElasticSearch.assets/image-20220329170945173.png)
 
 #### terms过滤
 
@@ -1587,7 +1587,7 @@ GET /products1/_search
 }
 ```
 
-![image-20220329173117150](ElasticSearch.assets/image-20220329173117150.png)
+![image-20220329173117150](/images/posts/ElasticSearch.assets/image-20220329173117150.png)
 
 #### range 过滤
 
@@ -1621,7 +1621,7 @@ GET /products1/_search
 }
 ```
 
-![image-20220329230811212](ElasticSearch.assets/image-20220329230811212.png)
+![image-20220329230811212](/images/posts/ElasticSearch.assets/image-20220329230811212.png)
 
 #### exists 过滤
 
@@ -1690,7 +1690,7 @@ GET /products1/_search
 }
 ```
 
-![image-20220329232045833](ElasticSearch.assets/image-20220329232045833.png)
+![image-20220329232045833](/images/posts/ElasticSearch.assets/image-20220329232045833.png)
 
 ## 整合应用
 
@@ -1792,7 +1792,7 @@ class DemoApplicationTests {
 通过这种方式添加的文档会有_class字段，记录文档的类型，用于后面反序列化时，反序列化何种类型
 ```
 
-![image-20220405223523234](ElasticSearch.assets/image-20220405223523234.png)
+![image-20220405223523234](/images/posts/ElasticSearch.assets/image-20220405223523234.png)
 
 ##### 更新文档
 
@@ -2052,7 +2052,7 @@ public void testMatchAll() throws IOException {
 }
 ```
 
-![image-20220414223536712](ElasticSearch.assets/image-20220414223536712.png)
+![image-20220414223536712](/images/posts/ElasticSearch.assets/image-20220414223536712.png)
 
 ##### term查询
 
@@ -2377,7 +2377,7 @@ public void testSearch() throws IOException {
 }
 ```
 
-![image-20220417175219880](ElasticSearch.assets/image-20220417175219880.png)
+![image-20220417175219880](/images/posts/ElasticSearch.assets/image-20220417175219880.png)
 
 ##### 过滤查询
 
@@ -2547,13 +2547,13 @@ public class DemoGoods {
 }
 ```
 
-![image-20220508175650312](ElasticSearch.assets/image-20220508175650312.png)
+![image-20220508175650312](/images/posts/ElasticSearch.assets/image-20220508175650312.png)
 
 ## 聚合查询
 
 ### 简介
 
-![image-20220508223402776](ElasticSearch.assets/image-20220508223402776.png)
+![image-20220508223402776](/images/posts/ElasticSearch.assets/image-20220508223402776.png)
 
 ### 测试数据
 
@@ -2638,7 +2638,7 @@ GET /fruit/_search
 }
 ```
 
-![image-20220508225728546](ElasticSearch.assets/image-20220508225728546.png)
+![image-20220508225728546](/images/posts/ElasticSearch.assets/image-20220508225728546.png)
 
 如果不想返回所有的数据，可以通过设置size实现
 
@@ -2660,7 +2660,7 @@ GET /fruit/_search
 }
 ```
 
-![image-20220508230133702](ElasticSearch.assets/image-20220508230133702.png)
+![image-20220508230133702](/images/posts/ElasticSearch.assets/image-20220508230133702.png)
 
 #### 最大值
 
